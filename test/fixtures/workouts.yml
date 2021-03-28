@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dduration: 1
+  cardio: false
+  strength: false
+  description: MyText
+  user: one
+
+two:
+  name: MyString
+  dduration: 1
+  cardio: false
+  strength: false
+  description: MyText
+  user: two
