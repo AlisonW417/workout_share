@@ -1,0 +1,29 @@
+<%= form_for @workout do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :date_completed %>
+    <%= f.date_field :date_completed %><br>
+
+    <%= f.label :duration, "Duration of Workout, (in minutes)" %>
+    <%= f.number_field :duration %><br>
+
+    <%= f.label :cardio, "Cardio?" %>
+    <%= f.check_box :cardio %><br>
+
+    <%= f.label :stength, "Stength?" %>
+    <%= f.check_box :strength %><br>
+
+    <%= f.label :average_heart_rate, "Average Heart Rate, (beats per minute)" %>
+    <%= f.number_field :average_heart_rate %><br>
+
+    <%= f.label :total_calories, "Total Calories Burned" %>
+    <%= f.number_field :total_calories %><br>
+
+    <%= f.label :description %> 
+    <%= f.text_area :description %><br>
+
+    <%= f.submit "Log workout" %>
+
+<% end %>
