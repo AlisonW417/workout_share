@@ -1,2 +1,33 @@
 <h1><%= @workout.name %> Summary </h1>
+<h2>Logged by: <%= @workout.user.username %></h2>
+<ul>
+    <li> 
+        Date: <%= @workout.date_completed %>
+    </li>
 
+    <li>
+        Duration: <%= @workout.duration %>
+    </li>
+
+    <li>
+        Cardio? <%= @workout.cardio %>
+    </li>
+
+    <li>
+        Strength? <%= @workout.strength %>
+    </li>
+
+    <li>
+        Average Heart Rate (bpm): <%= @workout.average_heart_rate %>
+    </li>
+
+    <li>
+        Total Calories Burned: <%= @workout.total_calories %> 
+    </li>
+
+    <li>
+        Description: <%= @workout.description %> 
+    </li>
+</ul>
+
+<p><%= link_to 'Edit Workout', edit_workout_path %></p>
