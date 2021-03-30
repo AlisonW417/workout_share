@@ -30,9 +30,11 @@
     </li>
 </ul>
 
+<h2>Give <%= @workout.user.username %> Kudos!</h2>
 <%= form_for @comment do |f| %>
-    <%= f.label :description, "Comment on this workout" %>
-    <%= f.text_area :description %>
+    <%= f.label :description, "Leave a comment" %><br>
+    <%= f.text_area :description %><br>
+    <%= f.submit "Submit" %>
 <% end %>
 
 <p><%= link_to 'Edit Workout', edit_workout_path %></p>
