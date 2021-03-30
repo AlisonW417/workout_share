@@ -4,5 +4,6 @@
 
 <% @workouts.each do |workout| %>
     <p><strong><%= workout.name %></strong></p>
-    <p><%= workout.date_completed %></p><br>
+    <p><%= workout.date_completed %></p>
+    <p><%= link_to 'View Workout Details', workout_path(workout) %></p><br>
 <% end %>
