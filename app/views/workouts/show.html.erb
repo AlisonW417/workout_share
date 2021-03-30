@@ -30,5 +30,10 @@
     </li>
 </ul>
 
+<%= form_for @comment do |f| %>
+    <%= f.label :description, "Comment on this workout" %>
+    <%= f.text_area :description %>
+<% end %>
+
 <p><%= link_to 'Edit Workout', edit_workout_path %></p>
 <p><%= link_to 'Delete Workout', workout_path(@workout), method: 'delete' %></p>
