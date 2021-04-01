@@ -1,0 +1,6 @@
+<h1>Comments</h1> 
+
+<% @comments.each do |c| %>
+    <p><strong><%= c.user.username %> commented on <%= c.workout.name %>:</strong></p>
+    <p><%= c.description %></p><br>
+<% end %> 

@@ -1,0 +1,10 @@
+<h1>Give <%= @workout.user.username %> kudos on <%= @workout.name %>!</h1>
+
+<%= form_for @comment do |f| %>
+    <%= f.label :description, "Leave a comment" %><br>
+    <%= f.text_area :description %><br>
+
+    <%= f.hidden_field :workout_id %>
+
+    <%= f.submit "Submit" %>
+<% end %>

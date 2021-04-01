@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :comments
-  resources :workouts
+  resources :workouts do 
+      resources :comments, only: [:new, :index]
+  end 
   resources :users
+  resources :comments
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
