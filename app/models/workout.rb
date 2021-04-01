@@ -7,4 +7,6 @@ class Workout < ApplicationRecord
   validates :date_completed, presence: true 
   validates :duration, presence: true 
   validates :description, presence: true 
+
+  scope :order_by_date, -> { order(date_completed: :desc) }
 end
