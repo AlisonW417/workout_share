@@ -18,9 +18,9 @@ class CommentsController < ApplicationController
 
     def index
         if @workout = Workout.find_by(id: params[:workout_id])
-            @comments = @workout.comments 
+            @comments = @workout.comments.order_by_create 
         else 
-            @comments = Comment.all 
+            @comments = Comment.all.order_by_create
         end 
     end 
    
