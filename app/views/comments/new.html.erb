@@ -1,4 +1,10 @@
-<h1>Give <%= @workout.user.username %> kudos on <%= @workout.name %>!</h1>
+<% if @workout = Workout.find_by_id(params[:workout_id]) %>
+    <h1>Give <%= @workout.user.username %> kudos on <%= @workout.name %>!</h1>
+<% else %>
+    <h1>Create a Comment</h1>
+<% end %>
+
+<%= render partial: 'layouts/errors', locals: {obj: @comment} %>
 
 <%= form_for @comment do |f| %>
     <%= f.label :description, "Leave a comment" %><br>

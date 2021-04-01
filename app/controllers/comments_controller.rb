@@ -1,8 +1,10 @@
 class CommentsController < ApplicationController
     def new 
-        # should a user have the option to create a new comment without starting on workout's show page?
-        @workout = Workout.find_by(id: params[:workout_id])
-        @comment = @workout.comments.build
+        if @workout = Workout.find_by_id(params[:workout_id])
+            @comment = @workout.comments.build
+        else 
+            @comment = Comment.new 
+        end 
     end 
 
     def create
