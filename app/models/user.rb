@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-    has_many :workouts 
-    has_many :comments
-    has_many :commented_workouts, through: :comments, source: :workout
+    has_many :workouts #workouts completed by user
+    has_many :comments #comments given by user
+    has_many :commented_workouts, through: :comments, source: :workout #workouts commented on by user
 
     validates :username, uniqueness: true, presence: true
 

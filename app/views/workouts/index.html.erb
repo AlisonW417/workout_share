@@ -1,6 +1,5 @@
 <h1>Check out the latest logged workouts!</h1>
 
 <% @workouts.each do |w| %>
-    <p><%= w.name %> | Logged by <%= w.user.username %> on <%= w.date_completed %></p>
-    <p><%= link_to 'View workout details', workout_path(w) %></p><br>
+    <p><%= link_to w.name, workout_path(w) %> | Logged by <%= link_to w.user.username, user_path(w.user) %> on <%= w.date_completed %></p>
 <% end %>
