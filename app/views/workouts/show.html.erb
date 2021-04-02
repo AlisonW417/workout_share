@@ -1,5 +1,5 @@
 <h1><%= @workout.name %> Summary </h1>
-<h5>Logged by: <%= @workout.user.username %></h5>
+<h5>Logged by: <%= link_to @workout.user.username, user_path(@workout.user) %></h5>
 <ul>
     <li> 
         Date: <%= @workout.date_completed %>
