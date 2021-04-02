@@ -1,14 +1,29 @@
-<h1><%= @user.username %>'s Workouts</h1>
+<div class="row">
+<div class="col s12">
+    <h1><%= @user.username %>'s Stats & Workouts</h1>
+</div>
 
-<% @workouts.each do |workout| %>
-    <p><strong><%= workout.name %></strong></p>
-    <p><%= workout.date_completed %></p>
-    <p><%= link_to 'View Workout Details', workout_path(workout) %></p><br>
-<% end %>
+<div class="col s3 #ffebee red lighten-5">
+    <h5>Stats</h5>
+    <ul>
+        <li><%= @user.calories_burned %> calories burned</li>
+        <li><%= @user.minutes_exercised %> minutes exercised</li>
+        <li><%= @user.workouts_logged %> workouts logged</li>
+    </ul>
+</div>
 
-<h5>Stats</h5>
-<ul>
-    <li><%= @user.calories_burned %> calories burned</li>
-    <li><%= @user.minutes_exercised %> minutes exercised</li>
-    <li><%= @user.workouts_logged %> workouts logged</li>
-</ul>
+
+<div class="col s9">
+    <h5>Logged Workouts</h5>
+
+    <% @workouts.each do |workout| %>
+        <p><strong><%= workout.name %></strong></p>
+        <p><%= workout.date_completed %></p>
+        <p><%= link_to 'View Workout Details', workout_path(workout) %></p><br>
+    <% end %>
+    <br>
+</div>
+
+
+
+</div>
