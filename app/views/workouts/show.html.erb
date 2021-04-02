@@ -1,5 +1,5 @@
 <h1><%= @workout.name %> Summary </h1>
-<h2>Logged by: <%= @workout.user.username %></h2>
+<h5>Logged by: <%= @workout.user.username %></h5>
 <ul>
     <li> 
         Date: <%= @workout.date_completed %>
@@ -10,11 +10,7 @@
     </li>
 
     <li>
-        Cardio? <%= @workout.cardio %>
-    </li>
-
-    <li>
-        Strength? <%= @workout.strength %>
+        Workout Type: <%= @workout.cardio_or_strength %>
     </li>
 
     <li>

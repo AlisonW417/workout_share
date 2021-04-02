@@ -1,6 +1,15 @@
+<p><strong><%= flash[:message] %></strong></p>
+
 <h1>Welcome to Workout Share</h1>
 
-<p>New to Workout share? <%= link_to 'Sign Up', signup_path %></p>
-<p>Or <%= button_to 'Sign in with Google', "/auth/google_oauth2" %></p><br>
+<h5>Already have a Workout Share account?</h5>
+<p><%= link_to 'Log In', login_path %></p>
 
-<p>Already have a Workout Share account? <%= link_to 'Log In', login_path %></p>
+<h5>New to Workout share?</h5>
+<p><%= link_to 'Sign Up', signup_path %></p> 
+
+<h5>Prefer to sign up and log in with your Google account?</h5>
+<div class="waves-effect #ef5350 red lighten-1 btn">
+    <%= button_to 'Sign in with Google', "/auth/google_oauth2" %>
+</div>
+
