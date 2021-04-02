@@ -11,12 +11,16 @@
   </head>
 
   <div>
+    <% if !logged_in? %>
     <%= link_to 'Sign Up', signup_path %> |
     <%= link_to 'Log In', login_path %> |
+    <% else %>
     <%= link_to 'Log Out', logout_path, method: :delete %> |
+    <% end %>
     <%= link_to 'Log a Workout', new_workout_path %> |
     <%= link_to 'Workout Feed', workouts_path %> |
-    <%= link_to 'Comments Feed', comments_path %>
+    <%= link_to 'Comments Feed', comments_path %> |
+    <%= link_to 'Home', welcome_path %>
   </div>
 
   <body>
