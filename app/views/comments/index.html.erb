@@ -1,7 +1,7 @@
 <h1>Comments</h1> 
 
 <% @comments.each do |c| %>
-    <p><strong><%= link_to c.user.username, user_path(c.user) %> commented on <%= link_to c.workout.name, workout_path(c.workout) %>:</strong> <%= c.description %></p><br>
+    <p><strong><%= link_to c.user.username, user_path(c.user) %> commented on <%= link_to c.workout.name, workout_path(c.workout) %>:</strong> <%= c.description %></p>
 <% end %> 
 
 <% if @workout %>

@@ -13,4 +13,8 @@ class User < ApplicationRecord
             u.password = SecureRandom.hex(17)
         end 
     end 
+
+    def total_calories
+        
+    end 
 end
