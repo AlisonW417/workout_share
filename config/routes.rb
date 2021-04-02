@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   delete '/logout', to: 'sessions#destroy'
+  get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
 
   resources :workouts do 
       resources :comments, only: [:new, :index]
