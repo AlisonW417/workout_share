@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+    
 
     def index
         @workouts = Workout.all.order_by_date
@@ -41,7 +42,8 @@ class WorkoutsController < ApplicationController
         @workout.destroy
         redirect_to user_path(@workout.user_id)
     end 
-
+    
+    private 
     def workout_params 
         params.require(:workout).permit(:name, :date_completed, :duration, :cardio, :strength, :average_heart_rate, :total_calories, :description)
     end 
