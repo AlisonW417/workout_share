@@ -14,7 +14,15 @@ class User < ApplicationRecord
         end 
     end 
 
-    def total_calories
-        
+    def calories_burned
+        self.workouts.collect { |w| w.total_calories }.sum 
+    end 
+
+    def minutes_exercised 
+        self.workouts.collect { |w| w.duration }.sum
+    end 
+
+    def workouts_logged 
+        self.workouts.count 
     end 
 end

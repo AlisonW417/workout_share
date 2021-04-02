@@ -5,3 +5,10 @@
     <p><%= workout.date_completed %></p>
     <p><%= link_to 'View Workout Details', workout_path(workout) %></p><br>
 <% end %>
+
+<h5>Stats</h5>
+<ul>
+    <li><%= @user.calories_burned %> calories burned</li>
+    <li><%= @user.minutes_exercised %> minutes exercised</li>
+    <li><%= @user.workouts_logged %> workouts logged</li>
+</ul>
