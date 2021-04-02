@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
         if @workout = Workout.find_by(id: params[:workout_id])
             @comments = @workout.comments.order_by_create 
         else 
-            @comments = Comment.all.order_by_create
+            @comments = Comment.order_by_create
         end 
     end 
    

@@ -1,7 +1,5 @@
 <h1><%= @user.username %>'s Workouts</h1>
 
-<%= link_to "Log a new Workout", new_workout_path %>
-
 <% @workouts.each do |workout| %>
     <p><strong><%= workout.name %></strong></p>
     <p><%= workout.date_completed %></p>

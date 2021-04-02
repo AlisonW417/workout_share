@@ -1,5 +1,9 @@
 <h1>Comments</h1> 
 
 <% @comments.each do |c| %>
-    <p><strong><%= c.user.username %> commented on <%= c.workout.name %>:</strong> <%= c.description %></p><br>
+    <p><strong><%= link_to c.user.username, user_path(c.user) %> commented on <%= c.workout.name %>:</strong> <%= c.description %></p><br>
 <% end %> 
+
+<% if @workout %>
+    <p><%= link_to 'Leave a comment for this workout', new_workout_comment_path(@workout.id) %></p>
+<% end %>

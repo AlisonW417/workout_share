@@ -25,6 +25,7 @@
         Description: <%= @workout.description %> 
     </li>
 </ul>
+<p><%= link_to 'View comments for this workout', workout_comments_path(@workout.id) %></p>
 
 <p><%= link_to 'Leave a comment for this workout', new_workout_comment_path(@workout.id) %></p>
 
