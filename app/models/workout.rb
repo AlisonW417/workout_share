@@ -19,5 +19,9 @@ class Workout < ApplicationRecord
       "Cardio and Strength"
     end 
   end 
+
+  def display_date
+    self.date_completed.strftime('%m-%d-%y')
+  end 
   
 end

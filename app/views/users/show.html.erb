@@ -16,7 +16,7 @@
         <h5>Logged Workouts</h5>
 
         <% @workouts.each do |workout| %>
-            <p><strong><%= workout.name %></strong> on <%= workout.date_completed %> | <%= link_to 'View Workout Details', workout_path(workout) %></p>
+            <p><strong><%= workout.name %></strong> on <%= workout.display_date %> | <%= link_to 'View Workout Details', workout_path(workout) %></p>
         <% end %>
         <br>
     </div>
