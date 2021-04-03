@@ -1,6 +1,8 @@
 <h1>Log in to track and share your workouts</h1>
 
-<p><strong><%= flash[:error] %></strong></p>
+<div class="field_with_errors">
+  <p><strong><%= flash[:error] %></strong></p>
+</div>
 
 <%= form_for(:user) do |f|%>
   <%= f.label :username %>
