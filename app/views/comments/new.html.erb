@@ -1,8 +1,4 @@
-<% if @workout %>
-    <h1>Give <%= @workout.user.username %> kudos on <%= @workout.name %>!</h1>
-<% else %>
-    <h1>Create a Comment</h1>
-<% end %>
+<%= display_header(@comment) %>
 
 <%= render partial: 'layouts/errors', locals: {obj: @comment} %>
 
