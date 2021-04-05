@@ -23,5 +23,4 @@ class Workout < ApplicationRecord
   def display_date
     self.date_completed.strftime('%m-%d-%y')
   end 
-  
 end

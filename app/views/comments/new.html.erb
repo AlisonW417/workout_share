@@ -1,4 +1,4 @@
-<% if @workout = Workout.find_by_id(params[:workout_id]) %>
+<% if @workout %>
     <h1>Give <%= @workout.user.username %> kudos on <%= @workout.name %>!</h1>
 <% else %>
     <h1>Create a Comment</h1>

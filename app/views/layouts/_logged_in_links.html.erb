@@ -1,0 +1,5 @@
+<li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+<li><%= link_to 'My Workouts', user_path(current_user) %></li>
+<li><%= link_to 'Log a Workout', new_workout_path %></li>
+<li><%= link_to 'Workout Feed', workouts_path %></li>
+<li><%= link_to 'Comments Feed', comments_path %></li>
