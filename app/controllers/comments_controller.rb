@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
     def new 
-        if @workout = Workout.find_by_id(params[:workout_id])
+        if nested?
             @comment = @workout.comments.build
         else 
             @comment = Comment.new 
@@ -17,14 +17,19 @@ class CommentsController < ApplicationController
     end 
 
     def index
-        if @workout = Workout.find_by(id: params[:workout_id])
+        if nested?
             @comments = @workout.comments.order_by_create 
         else 
             @comments = Comment.order_by_create
         end 
     end 
    
+    private 
     def comment_params 
         params.require(:comment).permit(:description, :workout_id)
+    end 
+
+    def nested? 
+        @workout = Workout.find_by(id: params[:workout_id])
     end 
 end
