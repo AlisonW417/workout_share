@@ -1,7 +1,7 @@
 # Workout Share
 
 * Installation 
-To use this application, just close, run rake db:migrate and then rails s.
+To use this application, just clone, run rake db:migrate and then rails s.
 
 * Usage 
 Sign up for the application by creating a username and password or logging in via an existing Google account. Users can create and post workout details as well as view workouts posted by other users. Users have the ability to leave comments on workouts and are able to edit and delete their own workouts.
