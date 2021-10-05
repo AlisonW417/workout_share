@@ -2,6 +2,7 @@ class Workout < ApplicationRecord
   belongs_to :user #user who created the workout
   has_many :comments #comments on a the workout
   has_many :users, through: :comments #users who commented on the workout
+  belongs_to :category
 
   validates :name, presence: true 
   validates :date_completed, presence: true 
